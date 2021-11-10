@@ -1,4 +1,3 @@
-
 export class Display {
    
     controllerDisplay(number, status) {
