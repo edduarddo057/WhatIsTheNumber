@@ -63,9 +63,13 @@ export class Display {
 
         }
 
-        setDisplay('hundred', mapDisplay(hundred), selectColor(status));
-        setDisplay('ten', mapDisplay(ten), selectColor(status));
-        setDisplay('unit', mapDisplay(unit), selectColor(status));
+        console.log(hundred)
+        console.log(ten)
+        console.log(unit)
+
+        this.setDisplay('hundred', this.mapDisplay(hundred), this.selectColor(status));
+        this.setDisplay('ten', this.mapDisplay(ten), this.selectColor(status));
+        this.setDisplay('unit', this.mapDisplay(unit), this.selectColor(status));
 
     }
 
