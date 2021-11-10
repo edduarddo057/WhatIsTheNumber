@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">    
+    <link rel="stylesheet" href="display.css">    
+    <title>Qual é o número?</title>
+
+</head>
+<body>
+    <div class="container-default">
+        <div class="container-title">
+            <h1 class="title">QUAL É O NÚMERO?</h1>
+            <hr class="title-line">
+        </div>
+
+        <div id="msgDisplay" >
+            <span class="msg-display">É maior</span>
+        </div>
+
+        <div id="display">
+            <div id="hundred" class="container-display">
+                <div id="segment-a" class="segment-display"></div>
+                <div id="segment-b" class="segment-display"></div>
+                <div id="segment-c" class="segment-display"></div>
+                <div id="segment-d" class="segment-display"></div>
+                <div id="segment-e" class="segment-display"></div>
+                <div id="segment-f" class="segment-display"></div>
+                <div id="segment-g" class="segment-display"></div>
+            </div>
+            
+            <div id="ten" class="container-display">
+                <div id="segment-a" class="segment-display"></div>
+                <div id="segment-b" class="segment-display"></div>
+                <div id="segment-c" class="segment-display"></div>
+                <div id="segment-d" class="segment-display"></div>
+                <div id="segment-e" class="segment-display"></div>
+                <div id="segment-f" class="segment-display"></div>
+                <div id="segment-g" class="segment-display"></div>
+            </div>
+            
+            <div id="unit" class="container-display">
+                <div id="segment-a" class="segment-display"></div>
+                <div id="segment-b" class="segment-display"></div>
+                <div id="segment-c" class="segment-display"></div>
+                <div id="segment-d" class="segment-display"></div>
+                <div id="segment-e" class="segment-display"></div>
+                <div id="segment-f" class="segment-display"></div>
+                <div id="segment-g" class="segment-display"></div>
+            </div>
+        </div>
+
+
+        <div class="container-actions">
+            <button class="button button-new-game" onclick="getNewNumber()">
+                <div class="icon-new-game">
+                    <div class="arrow"></div>
+                </div>
+                NOVA PARTIDA
+            </button>
+            
+            <div class="container-input">
+                <div>
+                    <div class="icon-refresh"></div>
+                    <input class="input" type="number" placeholder="Digite o palpite">
+                </div>
+                <button class="button button-send">ENVIAR</button>
+            </div>
+        </div>
+    </div>
+
+    <script type="module" src="main.js"></script>
+</body>
+</html>

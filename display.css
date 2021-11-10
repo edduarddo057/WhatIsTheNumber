@@ -1,0 +1,112 @@
+
+@import url('https://fonts.googleapis.com/css2? family = Montserrat: ital, wght @ 0,100; 0,200; 0,300; 0,400; 0,500; 0,600; 0,700; 0,800; 0,900; 1,100; 1,200; 1.300; 1.400; 1.500; 1.600; 1.700; 1.800; 1.900 & display = trocar ');
+
+#display {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    margin: 20px;
+}
+
+.segment-display {
+    height: 12px;
+    border-radius: 5px;
+    background-color: #262A34;
+}
+
+#segment-a {
+    clip-path: polygon(2% 0%, 98% 0%, 76% 100%, 24% 100%);
+    width: 55px;
+}
+
+#segment-b {
+    clip-path: polygon(2% 0%, 98% 0%, 84% 100%, 26% 100%);
+    width: 50px;
+    transform: rotateZ(90deg);
+    position: relative;
+    top: 7px;
+    left: 24px;
+}
+
+#segment-c {
+    clip-path: polygon(2% 0%, 98% 0%, 74% 100%, 16% 100%);
+    width: 50px;
+    transform: rotateZ( 90deg);
+    position: relative;
+    top: 45px;
+    left: 24px;
+}
+
+#segment-d {
+    clip-path: polygon(2% 0%, 98% 0%, 76% 100%, 24% 100%);
+    transform: rotateZ(180deg);
+    position: relative;
+    top: 52px;
+
+}
+
+#segment-e {
+    clip-path: polygon(2% 0%, 98% 0%, 84% 100%, 26% 100%);
+    width: 50px;
+    transform: rotateZ(-90deg);
+    position: relative;
+    top: 21px;
+    right: 19px;
+}
+
+#segment-f {
+    clip-path: polygon(2% 0%, 98% 0%, 74% 100%, 16% 100%);
+    width: 50px;
+    transform: rotateZ(-90deg);
+    position: relative;
+    right: 19px;
+    bottom: 41px;
+}
+
+#segment-g {
+    position: relative;
+    bottom: 28px;
+    z-index: -1;
+    clip-path: polygon(2% 50%, 22% 0%, 78% 0%, 98% 50%,78% 100%,22% 100%);
+}
+
+#ten {
+    margin: 0 10px;
+}
+
+.segment-color-default {
+    background-color: #262A34;
+}
+
+.segment-disable {
+    background-color: #DDDDDD;
+}
+
+.segment-success {
+    background-color: #32BF00;
+}
+
+.segment-error {
+    background-color: #CC3300;
+}
+
+.msg-display {
+    font-family: 'Montserrat', sans-serif;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 20px;
+    text-align: center;
+    letter-spacing: -1px;
+    color: #FF6600;    
+}
+
+.msg-display-success {
+    color: #32BF00;    
+}
+
+.msg-display-error {
+    color: #CC3300;    
+    text-transform: uppercase;
+}
