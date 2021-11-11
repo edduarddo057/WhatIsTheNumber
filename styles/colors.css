@@ -1,0 +1,14 @@
+:root {
+    --orange-100: #EF6C00;
+    --orange-200: #DB6300;
+    --orange-300: #C0661C;
+    --orange-400: #FF6600;
+    --initial-gradient-background: #EEEEEE;
+}
+
+@media(prefers-color-scheme: dark) {
+    :root {
+        --initial-gradient-background: black;
+    }
+    
+}
