@@ -1,7 +1,7 @@
 @import '../styles/colors.css';
 
 body {
-    background: linear-gradient(var(--initial-gradient-background), var(--end-gradient-background));
+    background: linear-gradient(180deg, var(--initial-gradient-background) 0%, var(--light-color) 100%);
     height: 100vh;
     width: 100vw;
     margin: 0px;
@@ -79,6 +79,7 @@ input::-webkit-inner-spin-button {
     border-radius: 4px;
     margin-right: 11px;
     padding: 0 12px;
+    color: var(--text-input);
 }
 
 .input:focus-visible, .input:focus {
