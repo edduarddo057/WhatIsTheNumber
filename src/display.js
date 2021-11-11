@@ -104,8 +104,8 @@ export class Display {
         return segmentsDisplay;
     }
 
-    setDisplay(display, segmentsDisplay, status) {
-        const segments =  document.getElementById(display).getElementsByClassName('segment-display');
+    setDisplay(idDisplay, segmentsDisplay, status) {
+        const segments =  document.getElementById(idDisplay).getElementsByClassName('segment-display');
 
         segmentsDisplay.forEach((element, index) => {
 
@@ -123,8 +123,8 @@ export class Display {
         });
     }
 
-    setDisplayVisibility(display, visible) {
-        const displayNone =  document.getElementById(display);
+    setDisplayVisibility(idDisplay, visible) {
+        const displayNone =  document.getElementById(idDisplay);
         if (visible) {
             displayNone.style.display = 'block'; 
         } else {
