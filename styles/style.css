@@ -2,7 +2,6 @@
 
 body {
     background: linear-gradient(180deg, var(--initial-gradient-background) 0%, var(--light-color) 100%);
-    height: 100vh;
     width: 100vw;
     margin: 0px;
     padding: 0px;
@@ -19,7 +18,9 @@ body {
     padding: 0px;
     margin: 0px;
     width: auto;
-    height: 100%;
+    height: 100vh;
+    min-width: 320px;
+    min-height: 410px;
 }
 
 .container-title {
@@ -67,6 +68,7 @@ body {
     flex-wrap: wrap;
     justify-content: center;
     padding-bottom: 31px;
+    padding-top: 20px;
 }
 
 .container-input {
@@ -108,14 +110,14 @@ input::placeholder {
     pointer-events: none;
 }
 
-/* @media(min-width: 600px) {
+@media(min-width: 600px) {
     .container-title {
         transform: scale(1.2);
     }
-} */
+}
 
-/* @media(max-width: 600px) {
+@media(min-width: 1000px) {
     .container-title {
-        transform: scale(1.2);
+        transform: scale(1.4);
     }
-} */
+}

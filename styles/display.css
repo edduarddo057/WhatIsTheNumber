@@ -10,10 +10,9 @@
 
 #display {
     display: flex;
-    width: 100%;
     align-items: center;
     justify-content: center;
-    margin: 3% 0;
+    margin: 3% 100%;
 }
 
 .segment-display {
@@ -131,8 +130,20 @@
     text-transform: uppercase;
 }
 
-/* @media(min-width: 600px) {
+@media(min-width: 600px) {
     .msg-display {
         transform: scale(1.2);
     } 
-} */
+    #display {
+        transform: scale(1.2);
+    } 
+}
+
+@media(min-width: 1000px) {
+    .msg-display {
+        transform: scale(1.4);
+    } 
+    #display {
+        transform: scale(1.4);
+    } 
+}

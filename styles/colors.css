@@ -19,13 +19,13 @@
 
 @media(prefers-color-scheme: dark) {
     :root {
-        --initial-gradient-background: #000;
+        --initial-gradient-background: #0e0e0e;
         --display: #E2E2E2;
         --color-send: #9E9E9E;
         --color-send-disabled: #4f4f4f;
         --display-disable: #282828;
         --disable-input: #2f2f2f;;
-        --light-color: #282828;
+        --light-color: #101010;
         --text-input: #FFFFFF;
         --gray-200: #434854;
     }
