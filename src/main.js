@@ -63,7 +63,6 @@ function sendGuess(key) {
 }
 
 function retartGame() {
-
     newGame.onclick = () => { 
         initGame();
     };

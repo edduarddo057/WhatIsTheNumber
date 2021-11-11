@@ -1,6 +1,6 @@
 :root {
     --initial-gradient-background: #EEEEEE;
-    --white: #FFFFFF;
+    --light-color: #FFFFFF;
     --display: #262A34;
     --display-disable: #DDDDDD;
     --success: #32BF00;
@@ -17,7 +17,10 @@
 
 @media(prefers-color-scheme: dark) {
     :root {
-        --initial-gradient-background: black;
+        --initial-gradient-background: #282828;
+        --display: #E2E2E2;
+        --display-disable: #282828;
+        --light-color: #E2E2E2;
     }
     
 }

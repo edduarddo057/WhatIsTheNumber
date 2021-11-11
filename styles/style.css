@@ -73,7 +73,7 @@ input::-webkit-inner-spin-button {
 .input {
     width: 217px;
     height: 42px;
-    background: var(--white);
+    background: var(--light-color);
     border: 1px solid var(--gray-200);
     box-sizing: border-box;
     border-radius: 4px;
