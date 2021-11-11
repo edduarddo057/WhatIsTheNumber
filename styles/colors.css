@@ -1,9 +1,18 @@
 :root {
-    --orange-100: #EF6C00;
-    --orange-200: #DB6300;
-    --orange-300: #C0661C;
-    --orange-400: #FF6600;
     --initial-gradient-background: #EEEEEE;
+    --white: #FFFFFF;
+    --display: #262A34;
+    --display-disable: #DDDDDD;
+    --success: #32BF00;
+    --error: #CC3300;
+    --orange-100: #FF6600;
+    --orange-200: #EF6C00;
+    --orange-300: #DB6300;
+    --orange-400: #C0661C;
+    --gray-100: #F5F5F5;
+    --gray-200: #CFCFCF;
+    --gray-300: #9E9E9E;
+    --gray-400: #434854;
 }
 
 @media(prefers-color-scheme: dark) {

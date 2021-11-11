@@ -3,7 +3,11 @@ export class Display {
     controllerDisplay(number, status) {
         let hundred, ten, unit;
 
-        if (number / 100 > 1) {
+        this.setDisplayVisibility('hundred', true);
+        this.setDisplayVisibility('ten', true);
+        this.setDisplayVisibility('unit', true);
+
+        if (number / 100 >= 1) {
 
             hundred = (number / 100).toString().split('.');
             hundred = parseInt(hundred[0]);
@@ -15,7 +19,7 @@ export class Display {
                 unit = 0;
             } else {
 
-                if (brokenNumber/10 > 1) {
+                if (brokenNumber/10 >= 1) {
 
                     if (brokenNumber % 10 === 0) {
                         ten = parseInt(brokenNumber / 10);
@@ -33,7 +37,7 @@ export class Display {
                         unit = 0;
                     } else {
                         ten = 0;
-                        unit = brokenNumber;
+                        unit = parseInt(brokenNumber);
                     }
 
                 }
@@ -41,9 +45,9 @@ export class Display {
 
         } else {
 
-            setDisplayVisibility('hundred', false);
+            this.setDisplayVisibility('hundred', false);
 
-            if (number/10 > 1) {
+            if (number/10 >= 1) {
 
                 let brokenNumber = (number / 10);
                 ten = brokenNumber.toString().split('.');
@@ -57,15 +61,11 @@ export class Display {
                 }
 
             } else {
-                setDisplayVisibility('ten', false);
-                unit = number;
+                this.setDisplayVisibility('ten', false);
+                unit = parseInt(number);
             }
 
         }
-
-        console.log(hundred)
-        console.log(ten)
-        console.log(unit)
 
         this.setDisplay('hundred', this.mapDisplay(hundred), this.selectColor(status));
         this.setDisplay('ten', this.mapDisplay(ten), this.selectColor(status));
@@ -86,7 +86,7 @@ export class Display {
     
     mapDisplay(number) {
         let segmentsDisplay = [];
-
+        console.log(number)
         switch(number){
             case 0: segmentsDisplay = [1,1,1,1,1,1,0]; break;
             case 1: segmentsDisplay = [0,1,1,0,0,0,0]; break;
@@ -106,7 +106,7 @@ export class Display {
 
     setDisplay(display, segmentsDisplay, status) {
         const segments =  document.getElementById(display).getElementsByClassName('segment-display');
-        
+
         segmentsDisplay.forEach((element, index) => {
 
             segments[index].classList.remove('segment-success');
@@ -132,12 +132,40 @@ export class Display {
         }
     }
 
-    visibilityMsgDisplay(visible) {
+    visibilityMsgDisplay(msg, status) {
         const msgDisplay = document.getElementById('msgDisplay');
-        if (visible) {
-            msgDisplay.style.display = 'none'
+        msgDisplay.innerHTML = msg;
+        let classColor;
+
+        msgDisplay.classList.remove('msg-color-success');
+        msgDisplay.classList.remove('msg-color-error');
+        msgDisplay.classList.remove('msg-color-default');
+
+        switch(status) {
+            case 'success': classColor = 'msg-color-success'; break;  
+            case 'error': classColor = 'msg-color-error'; break;  
+            default : classColor = 'msg-color-default'; break;  
+        }
+
+        msgDisplay.classList.add(classColor);
+    }
+
+    restartAuxDisplay(visible) {
+        const msgDisplay = document.getElementById('newGame');
+        const input = document.getElementById('input');
+        const send = document.getElementById('send');
+
+        msgDisplay.classList.remove('visibleNewGame');
+        msgDisplay.classList.remove('notVisibleNewGame');
+        input.classList.remove('disable-input')
+        send.classList.remove('disable-button-send')
+
+        if(visible){
+            msgDisplay.classList.add('visibleNewGame');
+            input.classList.add('disable-input')
+            send.classList.add('disable-button-send')
         } else {
-            msgDisplay.style.display = 'block'
+            msgDisplay.classList.add('notVisibleNewGame');
         }
     }
 

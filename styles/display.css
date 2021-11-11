@@ -11,7 +11,7 @@
 .segment-display {
     height: 12px;
     border-radius: 5px;
-    background-color: #262A34;
+    background-color: var(--display);  
 }
 
 #segment-a {
@@ -75,19 +75,31 @@
 }
 
 .segment-color-default {
-    background-color: #262A34;
+    background-color: var(--display);
 }
 
 .segment-disable {
-    background-color: #DDDDDD;
+    background-color: var(--display-disable);
 }
 
 .segment-success {
-    background-color: #32BF00;
+    background-color: var(--success);
 }
 
 .segment-error {
-    background-color: #CC3300;
+    background-color: var(--error);
+}
+
+.msg-color-success {
+    color: var(--success);
+}
+
+.msg-color-error {
+    color: var(--error);
+}
+
+.msg-color-default {
+    color: var(--orange-100);
 }
 
 .msg-display {
@@ -97,15 +109,14 @@
     font-size: 16px;
     line-height: 20px;
     text-align: center;
-    letter-spacing: -1px;
-    color: #FF6600;    
+    letter-spacing: -1px;   
 }
 
 .msg-display-success {
-    color: #32BF00;    
+    color: var(--success);    
 }
 
 .msg-display-error {
-    color: #CC3300;    
+    color: var(--error);    
     text-transform: uppercase;
 }

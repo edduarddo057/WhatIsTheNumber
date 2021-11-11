@@ -6,7 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="color-scheme" content="light dark">
     <link rel="stylesheet" href="./styles/style.css">    
-    <link rel="stylesheet" href="./styles/display.css">    
+    <link rel="stylesheet" href="./styles/buttons.css">    
+    <link rel="stylesheet" href="./styles/display.css">   
+
     <title>Qual é o número?</title>
 
 </head>
@@ -17,9 +19,7 @@
             <hr class="title-line">
         </div>
 
-        <div id="msgDisplay" >
-            <span class="msg-display">É maior</span>
-        </div>
+        <div id="msgDisplay" class="msg-display"></div>
 
         <div id="display">
             <div id="hundred" class="container-display">
@@ -55,7 +55,7 @@
 
 
         <div class="container-actions">
-            <button class="button button-new-game" onclick="getNewNumber()">
+            <button class="button" id="newGame">
                 <div class="icon-new-game">
                     <div class="arrow"></div>
                 </div>
@@ -65,15 +65,13 @@
             <div class="container-input">
                 <div>
                     <div class="icon-refresh"></div>
-                    <input class="input" type="number" placeholder="Digite o palpite">
+                    <input id="input" class="input" type="number" placeholder="Digite o palpite" maxlength="3">
                 </div>
-                <button class="button button-send">ENVIAR</button>
+                <button id="send" class="button button-send">ENVIAR</button>
             </div>
         </div>
     </div>
 
-    <script src="./src/display.js"></script>
-    <script src="./src/request.js"></script>
     <script type="module" src="./src/main.js"></script>
 </body>
 </html>

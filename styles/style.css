@@ -1,8 +1,7 @@
-@import url('https://fonts.googleapis.com/css2? family = Montserrat: ital, wght @ 0,100; 0,200; 0,300; 0,400; 0,500; 0,600; 0,700; 0,800; 0,900; 1,100; 1,200; 1.300; 1.400; 1.500; 1.600; 1.700; 1.800; 1.900 & display = trocar ');
 @import '../styles/colors.css';
 
 body {
-    background: linear-gradient(var(--initial-gradient-background),#fff);
+    background: linear-gradient(var(--initial-gradient-background), var(--end-gradient-background));
     height: 100vh;
     width: 100vw;
     margin: 0px;
@@ -31,7 +30,7 @@ body {
 
 .title {
     font-family: Arial, Helvetica, sans-serif;
-    background: -webkit-linear-gradient(#EF6C00,#DB6300);
+    background: -webkit-linear-gradient(var(--orange-200), var(--orange-300));
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     font-weight: bold;
@@ -42,7 +41,7 @@ body {
 .title-line {
     width: 56%;
     margin: 5px 0;
-    border: solid 1px #CFCFCF;
+    border: solid 1px var(--gray-200);
 }
 
 .container-display {
@@ -74,8 +73,8 @@ input::-webkit-inner-spin-button {
 .input {
     width: 217px;
     height: 42px;
-    background: #FFFFFF;
-    border: 1px solid #CFCFCF;
+    background: var(--white);
+    border: 1px solid var(--gray-200);
     box-sizing: border-box;
     border-radius: 4px;
     margin-right: 11px;
@@ -83,59 +82,15 @@ input::-webkit-inner-spin-button {
 }
 
 .input:focus-visible, .input:focus {
-    border: solid 1px #FF6600;
+    border: solid 1px var(--orange-100);
     outline: 0;
 }
 
 input::placeholder {
-    color: #9E9E9E;
+    color: var(--gray-300);
 }
 
-.button {
-    height: 42px;
-    padding: 0px;
-    margin: 0px;
-    font-family: Arial, Helvetica, sans-serif;
-    color: white;
-    cursor: pointer;
-    font-size: 12px;
-    font-weight: bold;
-    border: none;
-    border-radius: 5px;
-}
-
-.icon-new-game {
-    width: 10px;
-    height: 10px;
-    border-radius: 50%;
-    background-color: transparent;
-    border: solid 2px white ;
-    border-right: solid 2px transparent;
-    margin-right: 5px;
-}
-
-.arrow {
-    width: 6px;
-    height: 6px;
-    background-color: white;
-    clip-path: polygon(100% 0, 0% 100%, 100% 100%);
-    position: relative;
-    left: 6px;
-    bottom: 2px;
-}
-
-.button-new-game {
-    background: linear-gradient(#9E9E9E,#434854);
-    width: 130px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-
-
-.button-send {
-    background: linear-gradient(#EF6C00,#C0661C);
-    width: 70px;
-
+.disable-input {
+    background: var(--gray-100);
+    pointer-events: none;
 }

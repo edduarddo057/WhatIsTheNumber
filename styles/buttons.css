@@ -1,0 +1,59 @@
+@import '../styles/colors.css';
+
+.button {
+    height: 42px;
+    padding: 0px;
+    margin: 0px;
+    font-family: Arial, Helvetica, sans-serif;
+    color: var(--white);
+    cursor: pointer;
+    font-size: 12px;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+}
+
+.arrow {
+    width: 6px;
+    height: 6px;
+    background-color: var(--white);
+    clip-path: polygon(100% 0, 0% 100%, 100% 100%);
+    position: relative;
+    left: 6px;
+    bottom: 2px;
+}
+
+#newGame {
+    background: linear-gradient(var(--gray-300), var(--gray-400));
+    width: 130px;
+    align-items: center;
+    justify-content: center;
+}
+
+.visibleNewGame {
+    display: flex;
+}
+
+.notVisibleNewGame {
+    display: none;
+}
+
+.icon-new-game {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: transparent;
+    border: solid 2px var(--white) ;
+    border-right: solid 2px transparent;
+    margin-right: 5px;
+}
+
+.button-send {
+    background: linear-gradient(var(--orange-200), var(--orange-400));
+    width: 70px;
+}
+
+.disable-button-send {
+    background: var(--display-disable);
+    pointer-events: none;
+}
