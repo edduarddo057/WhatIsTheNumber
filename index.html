@@ -70,7 +70,7 @@
             <div class="container-input">
                 <div>
                     <div class="icon-refresh"></div>
-                    <input id="input" class="input" type="number" placeholder="Digite o palpite" maxlength="3">
+                    <input onkeypress="return event.charCode >= 48 && event.charCode <= 57" id="input" class="input" type="text" placeholder="Digite o palpite" maxlength="3">
                 </div>
                 <button id="send" class="button button-send">ENVIAR</button>
             </div>

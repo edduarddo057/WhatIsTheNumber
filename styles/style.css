@@ -101,6 +101,18 @@ input::placeholder {
 }
 
 .disable-input {
-    background: var(--gray-100);
+    background: var(--disable-input);
     pointer-events: none;
 }
+
+@media(min-width: 600px) {
+    .container-title {
+        transform: scale(1.2);
+    }
+}
+
+/* @media(max-width: 600px) {
+    .container-title {
+        transform: scale(1.2);
+    }
+} */

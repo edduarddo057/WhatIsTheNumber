@@ -28,6 +28,8 @@
     width: 130px;
     align-items: center;
     justify-content: center;
+    position: relative;
+    top: 15%;
 }
 
 .visibleNewGame {
@@ -50,10 +52,11 @@
 
 .button-send {
     background: linear-gradient(var(--orange-200), var(--orange-400));
+    color: var(--light-color);
     width: 70px;
 }
 
 .disable-button-send {
-    background: var(--display-disable);
+    background: var(--color-send-disabled);
     pointer-events: none;
 }

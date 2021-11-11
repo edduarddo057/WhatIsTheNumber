@@ -36,23 +36,23 @@ function sendGuess(key) {
     retartGame();
     
     send.onclick = () => {
+        const inputValue = parseInt(input.value);
+        if (inputValue) {  
 
-        if (input.value) {  
+            display.controllerDisplay(inputValue);
 
-            display.controllerDisplay(input.value);
-
-            if (input.value > key ) {
+            if (inputValue > key ) {
 
                 display.visibilityMsgDisplay('É menor');
 
-            } else if (input.value < key) {
+            } else if (inputValue < key) {
 
                 display.visibilityMsgDisplay('É maior');
 
             } else {
 
                 display.visibilityMsgDisplay('Você acertou!!!!', 'success');
-                display.controllerDisplay(input.value, 'success');
+                display.controllerDisplay(inputValue, 'success');
                 display.restartAuxDisplay(true);
 
             }
