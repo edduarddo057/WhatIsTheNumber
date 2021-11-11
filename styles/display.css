@@ -131,8 +131,8 @@
     text-transform: uppercase;
 }
 
-@media(min-width: 600px) {
+/* @media(min-width: 600px) {
     .msg-display {
         transform: scale(1.2);
     } 
-}
+} */

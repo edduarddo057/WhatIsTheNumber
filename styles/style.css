@@ -18,7 +18,7 @@ body {
     flex-wrap: wrap;
     padding: 0px;
     margin: 0px;
-    width: 100%;
+    width: auto;
     height: 100%;
 }
 
@@ -27,6 +27,7 @@ body {
     align-items: center;
     justify-content: center;
     flex-wrap: wrap;
+    padding-top: 62px;
 }
 
 /* .align-title {
@@ -43,8 +44,8 @@ body {
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     font-weight: bold;
-    font-size: 24px;    
-    margin-top: 25%;
+    font-size: 24px; 
+    margin: 0px;   
     margin-bottom: 5px;
 }
 
@@ -65,7 +66,7 @@ body {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    margin-bottom: 10%;
+    padding-bottom: 31px;
 }
 
 .container-input {
@@ -107,11 +108,11 @@ input::placeholder {
     pointer-events: none;
 }
 
-@media(min-width: 600px) {
+/* @media(min-width: 600px) {
     .container-title {
         transform: scale(1.2);
     }
-}
+} */
 
 /* @media(max-width: 600px) {
     .container-title {

@@ -1,7 +1,7 @@
 import {Display} from '../src/display.js'
 import {Request} from '../src/request.js'
 
-const request = new Request('https://us-central1-ss-devops.cloudfunctions.net/rand?min=1&max=300');
+const request = new Request('https://us-central1-ss-devops.cloudfunctions.net/rand?min=1');
 const display = new Display();
 const newGame = document.getElementById('newGame');
 const input = document.getElementById('input');
