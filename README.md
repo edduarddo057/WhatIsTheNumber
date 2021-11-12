@@ -2,6 +2,9 @@
 
 Um jogo de palpites que tem por objetivo tentar advinhar um número através de chutes.
 
+## Hospedagem da aplicação
+  O link para acesso da aplicação é este: https://edduarddo057.github.io/WhatIsTheNumber/ 
+
 ## Introdução
 
 Jogo de chutes para se destrair quando está atoa ou mesmo passando o tempo, divertido e simples qualquer um pode jogar! :D  
@@ -42,9 +45,6 @@ e de script presentes na aplicação.
  - Como a implementação pedia a não utilização de fontes externas o icone de reinicialização do game foi feito completamente por css!
  - Foi adicionado um modo noturno, que acompanha o navegador caso o seu navegador esteja configurado em modo noturno o jogo reconhece
     automaticamente a corrige as cores para melhor visualização do jogador além de economizar energia do aparelho utilizado! 😉
-
-## Hospedagem da aplicação
-  O link para acesso da aplicação é este: https://edduarddo057.github.io/WhatIsTheNumber/ 
  
 ## Pontos a melhorar?
 - O erro 'from origin 'null' has been blocked by CORS policy' ocorreu, isso acontece por tentar chamar um script.js diretamente de um endereço físico na própia 
