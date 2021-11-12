@@ -7,6 +7,10 @@
 import {Display} from '../src/display.js'
 import {Request} from '../src/request.js'
 
+/**
+* Variáveis globais para capturar elementos HTML e instancias das duas classes Request e Display.   
+*/
+
 const request = new Request('https://us-central1-ss-devops.cloudfunctions.net/rand?min=1&max=300');
 const display = new Display();
 const newGame = document.getElementById('newGame');
