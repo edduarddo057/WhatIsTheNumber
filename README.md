@@ -11,11 +11,11 @@ Jogo de chutes para se destrair quando está atoa ou mesmo passando o tempo, div
 
 ## Como o jogo está estruturado? 🤔
 
-O jogo é dividido em duas pastas uma de arquivos java script e outra de arquivos css, além de uma arquivo html.
+O jogo é dividido em duas pastas uma de arquivos javascript e outra de arquivos css, além de uma arquivo html.
 
-### Arquivos java script
+### Arquivos javascript
 
-As configurações java script estão separadas em 3 arquivos: main.js, display.js e request.js
+As configurações javascript estão separadas em 3 arquivos: main.js, display.js e request.js
 
 Sendo o main.js responsável por gerenciar instanciar e controlar todas as outras classes. 
 O display.js por outro lado controla somente as funções de exibição dos segmentos e seus metodos.
