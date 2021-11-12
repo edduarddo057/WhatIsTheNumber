@@ -22,7 +22,7 @@ export class Request {
             request.onerror = () => reject(request.status);
             request.onload = () => {
                     if (request.readyState === 4){  
-                        if(request.status === 200) {
+                        if(request.status >= 200 && request.status < 300) {
                             resolve(JSON.parse(request.response));
                         } 
                         reject(request.status);

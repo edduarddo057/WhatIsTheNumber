@@ -49,42 +49,42 @@ function initGame() {
 * adicionar funções ao metodos onclick do botão enviar, além de chamar a função 'retartGame'.
 */
 
-function sendGuess(key) {
-
-    retartGame();
-    send.onclick = () => controllerMsg();
-}
-
 /**
-* Função controllerMsg: Função responsável por gerenciar a cor do display das mensagens e por a exibilas
-* no game enviando para a função responsável uma das opções sendo 'É menor', 'É maior' e 'Você acertou!!!!'.
+* A arrow function adicionada a o onclick do botão enviar tem por responsabilidade 
+* gerenciar a cor do display das mensagens e por a exibilas no game enviando para a
+* função responsável uma das opções sendo 'É menor', 'É maior' e 'Você acertou!!!!'.
 * Além disso em caso de acerto o botão para reiniciar o game é ativado.
 */
 
-function controllerMsg() {
-    const inputValue = parseInt(input.value);
-    if (inputValue) {  
+function sendGuess(key) {
 
-        display.controllerDisplay(inputValue);
+    retartGame();
+    send.onclick = () => {
 
-        if (inputValue > key ) {
-
-            display.visibilityMsgDisplay('É menor');
-
-        } else if (inputValue < key) {
-
-            display.visibilityMsgDisplay('É maior');
-
-        } else {
-
-            display.visibilityMsgDisplay('Você acertou!!!!', 'success');
-            display.controllerDisplay(inputValue, 'success');
-            display.restartAuxDisplay(true);
-
-        }
-
-        input.value = null;
-    }
+        const inputValue = parseInt(input.value);
+        
+        if (inputValue) {  
+    
+            display.controllerDisplay(inputValue);
+    
+            if (inputValue > key ) {
+    
+                display.visibilityMsgDisplay('É menor');
+    
+            } else if (inputValue < key) {
+    
+                display.visibilityMsgDisplay('É maior');
+    
+            } else {
+    
+                display.visibilityMsgDisplay('Você acertou!!!!', 'success');
+                display.controllerDisplay(inputValue, 'success');
+                display.restartAuxDisplay(true);
+    
+            }
+    
+            input.value = null;
+        }};
 }
 
 /**
