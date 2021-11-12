@@ -47,6 +47,9 @@ e de script presentes na aplicação.
   O link para acesso da aplicação é este: https://edduarddo057.github.io/WhatIsTheNumber/ 
  
 ## Pontos a melhorar?
+- O erro 'from origin 'null' has been blocked by CORS policy' este erro ocorre por tentar chamar um script.js diretamente de um endereço físico na própia 
+  maquina, por politicas de segurança o próprio navegador acusa esse problema, contudo ele é resolvido com a hospedagem do jogo que neste caso foi feita
+  no GitHub Pages.
 - Melhores metódos para responsividade que ficou funcional, mas podemos melhora-la expressivamente.
 - Testes automatizados de interface e unitario que são impresindiveis para uma boa gerencia da aplicação;
 - Criptrográfia do número chave para melhor jogabilidade.
