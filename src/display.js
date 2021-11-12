@@ -1,4 +1,15 @@
+/**
+* Classe Display: Está classe é responsável por implementar a lógica
+* que configura todo o funcionamento do display de sete segmentos,
+* o que inclui exibir, ocultar, modificar valores e cores etc...
+*/
 export class Display {
+
+    /**
+    * Método controllerDisplay: Este método recebe um numero inteiro como parametro
+    * e uma string de status, de acordo com este número o método o separa em unidade,
+    * dezena e centena. Uma vez separado ele invoca as funções que modificam o display.
+    */
    
     controllerDisplay(number, status) {
         let hundred, ten, unit;
@@ -73,6 +84,11 @@ export class Display {
 
     }
 
+    /**
+    * Método selectColor: Este método recebe uma string status e retorna a classe 
+    * com a cor correta para aquele status.
+    */
+
     selectColor(status) {
         let classColor;
         switch(status) {
@@ -83,6 +99,13 @@ export class Display {
 
         return classColor;
     }
+
+    /**
+    * Método mapDisplay: Este método recebe um numero inteiro como paremetro e retorna um 
+    * vetor com o mapeamento para o display de 7 segmentos que contém 0s e 1s, sendo que 1
+    * é para ligar o display e 0 é para desligar o display este método retorna um numero por
+    * vez.  
+    */
     
     mapDisplay(number) {
         let segmentsDisplay = [];
@@ -104,6 +127,13 @@ export class Display {
         return segmentsDisplay;
     }
 
+    /**
+    * Método setDisplay: Este método recebe um id de um dos três displays o mapeamento feito
+    * pelo método 'mapDisplay' e a classe com a cor de status correta retornada pelo metodo 
+    * 'selectColor'. Com todos estes dados o método consegue acender somente os segmentos
+    * necessários para formar um dos digitos.  
+    */
+
     setDisplay(idDisplay, segmentsDisplay, status) {
         const segments =  document.getElementById(idDisplay).getElementsByClassName('segment-display');
 
@@ -123,6 +153,12 @@ export class Display {
         });
     }
 
+    /**
+    * Método setDisplayVisibility: Este método recebe um id de um dos displays e sua 
+    * visibilidade sendo true visivel e false não visivel, com estes dados ele exine 
+    * ou não o display selecionado.
+    */
+
     setDisplayVisibility(idDisplay, visible) {
         const displayNone =  document.getElementById(idDisplay);
         if (visible) {
@@ -131,6 +167,13 @@ export class Display {
             displayNone.style.display = 'none';
         }
     }
+
+    /**
+    * Método visibilityMsgDisplay: Este método recebe uma mensagem e um status de cor,
+    * ele é responsável por trocar entre as três mensagem possiveis 'ERRO', 'Você acertou!!!!',
+    * 'É maior', 'É menor' ou um texto vazio '', o que no caso seria sem nenhuma mensagem
+    * selecionada, e com o status da cor ele adiciona a classe de cor correta. 
+    */
 
     visibilityMsgDisplay(msg, status) {
         const msgDisplay = document.getElementById('msgDisplay');
@@ -149,6 +192,13 @@ export class Display {
 
         msgDisplay.classList.add(classColor);
     }
+
+    /**
+    * Método restartAuxDisplay: Este método recebe um parametro de visibilidade, que é true
+    * para visivel e false para não visivel. Ele é responsável por exibir ou não exibir o
+    * botão de reiniciar o game, logo é atribuido a ele juntamente a função de bloquear 
+    * e desbloquear o input e o botão de enviar.  
+    */
 
     restartAuxDisplay(visible) {
         const msgDisplay = document.getElementById('newGame');
